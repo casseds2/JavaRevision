@@ -1,6 +1,6 @@
-class Bag <T> {
+class Bag <T extends Comparable<T>>{
 
-	private T [] bag = (T[])(new Object[100]);
+	private T [] bag = (T[])(new Comparable[100]);
 	private int count = 0;
 
 	int getCount(){
@@ -37,5 +37,17 @@ class Bag <T> {
 				i = 0;
 			}
 		}
+	}
+
+	int numGreater(T x){
+		int numCount = 0;
+		for(int i = 0; i < count; i++){
+			System.out.println(bag[i].toString() + " || " + x.toString());
+			if(bag[i].compareTo(x) > 0){
+				numCount++;
+			}
+			System.out.println();
+		}
+		return numCount;
 	}
 }
