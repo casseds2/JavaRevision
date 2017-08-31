@@ -1,5 +1,5 @@
-import java.io.*;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Scanner;
 
 class Directory{
 	public static void main(String [] args){
