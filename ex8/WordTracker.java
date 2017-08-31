@@ -17,7 +17,5 @@ class WordTracker{
 				System.out.println(word + " was already in the set.");
 			}
 		}
-
 	}	
-
 }
