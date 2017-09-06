@@ -1,14 +1,14 @@
-class UnboundedStack<T> { // bounded
+class UnboundedStack<T> {
 
-	private T[] seq; // the sequence
-	private int size = 0; // size of sequence
+	private T[] seq;
+	private int size = 0;
 	
 	UnboundedStack(int n) { // n>0
 		seq = (T[])(new Object[n]);
 	}
 
 	UnboundedStack() { 
-		seq = (T[])(new Object[5]);  // or this(10000);
+		seq = (T[])(new Object[5]);
 	}
 
 	int getSize(){
