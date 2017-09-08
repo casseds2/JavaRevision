@@ -9,6 +9,7 @@ class LinkedQueue<T> {
 		}
 	}
 		
+	private int size = 0;
 	private Node<T> head = null; 
 	private Node<T> tail = null; // both null, or neither null
 
@@ -25,13 +26,24 @@ class LinkedQueue<T> {
 		else 
 			head = tNode;
 		tail = tNode;
+		size++;
 		return true;
 	}
 
 	T deq() {
 		Node<T> temp = head;
 		head = head.next;
+		size--;
 		return temp.item;
+	}
+
+	T first(){
+		Node<T> temp = head;
+		return temp.item;
+	}
+
+	int size(){
+		return size;
 	}
 
 	void put(){
