@@ -38,7 +38,7 @@ class LinkedQueue<T> {
 	}
 
 	T first(){
-		Node<T> temp = head;
+		Node<T> temp = head; 
 		return temp.item;
 	}
 
