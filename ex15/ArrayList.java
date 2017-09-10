@@ -7,9 +7,9 @@ class ArrayList<T>{
 
 	//return the first index of t
 	public int indexOf(T t){
-		System.out.println("T: " + t);
-		for(int i = 0; i < numItems-1; i++){
-			System.out.println("Seq[i]: " + seq[i]);
+		//System.out.println("T: " + t);
+		for(int i = 0; i < numItems; i++){
+			System.out.println("Seq[" + i + "]: " + seq[i]);
 			if(seq[i] == t){
 				return i;
 			}
@@ -20,17 +20,25 @@ class ArrayList<T>{
 	//Add t the be the first element
 	//Implement an addFirst Method
 	public void addFirst(T t){
-		
+		add(0, t);	
 	}
 		
 	public T remove(int i){
-		if(numItems >= i){
-			T temp = seq[i];
-			seq[i] = null;
-			numItems--;
-			return temp;
+		T temp = seq[i];
+		seq[i] = null;
+		//numItems--;
+		return temp;
+	}
+
+	public void put(){
+		System.out.print("[");
+		for(int i = 0; i < numItems; i++){
+			if(i == numItems-1)
+				System.out.print(seq[i]);
+			else
+				System.out.print(seq[i] + ", ");
 		}
-		return null;
+		System.out.println("]");
 	}
 
 	public int size() {return(numItems);}
